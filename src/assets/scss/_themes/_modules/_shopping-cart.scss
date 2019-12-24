@@ -1,0 +1,77 @@
+button.count {
+  border: none;
+  background: transparent;
+  color: $primary;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.product-code {
+  border-radius: 4px;
+  color: $gray-medium;
+  letter-spacing: 0.13px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.product-quantity {
+  border-color: $gray-light;
+  border-style: solid;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.product-currency {
+  margin-left: 4px;
+}
+
+.product-image {
+  h1 {
+    color: $primary;
+  }
+
+  img {
+    border-style: solid;
+    border-color: $gray;
+    border-radius: 4px;
+  }
+}
+
+.product {
+  h1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .clear {
+    border: none;
+    background: transparent;
+
+    span {
+      &:after,
+      &:before {
+        border-radius: 8px;
+        background-color: $gray-medium;
+        transform-origin: center center;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:before {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+// Product list
+
+.products-list-title {
+  color: $gray-medium;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  line-height: 16px;
+}

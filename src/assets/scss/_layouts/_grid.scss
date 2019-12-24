@@ -1,0 +1,45 @@
+
+.row {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  
+  .row + .row {
+    margin-top: 32px;
+  }
+  
+  [class*="col-"] {
+    display: flex;
+    align-items: center;
+  }
+  
+  [class*="col-"]:nth-child(n + 2) {
+    justify-content: center;
+  }
+  
+  .col-product {
+    width: 45%;
+  }
+  
+  .col-quantity {
+    width: 20%;
+  }
+  
+  .col-price {
+    width: 20%;
+  }
+  
+  .col-total {
+    width: 15%;
+  }
+
+  .wrapper {
+    padding: 32px 0;
+  }
+  
+  .wrapper-half {
+    padding: 24px 0;
+  }
+  

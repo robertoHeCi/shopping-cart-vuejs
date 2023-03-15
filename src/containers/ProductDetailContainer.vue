@@ -1,17 +1,29 @@
 <template>
-  <main class="main-container" v-if="product!=null">
+  <main
+    v-if="product!=null"
+    class="main-container"
+  >
     <section class="product-details-image">
-      <img :src="productImage" :alt="productDescriptionAlt" />
+      <img
+        :src="productImage"
+        :alt="productDescriptionAlt"
+      >
     </section>
     <aside class="product-details">
       <ul>
-        <li class="product-details-close" @click="returnToHomePage">
-          <img :src="productDetailCloseIcon" alt="close-product" />
+        <li
+          class="product-details-close"
+          @click="returnToHomePage"
+        >
+          <img
+            :src="productDetailCloseIcon"
+            alt="close-product"
+          >
         </li>
         <li class="wrapper-half border">
-          <span>{{product.description}}</span>
+          <span>{{ product.description }}</span>
           <span>
-            {{product.price}}
+            {{ product.price }}
             <span class="currency">€</span>
           </span>
         </li>
@@ -25,10 +37,15 @@
       </div>
       <ul>
         <li class="border-top product-details-code">
-          <span>Product code {{product.code}}</span>
+          <span>Product code {{ product.code }}</span>
         </li>
       </ul>
-      <button type="submit" @click="onCounterIncrements">Add to cart</button>
+      <button
+        type="submit"
+        @click="onCounterIncrements"
+      >
+        Add to cart
+      </button>
     </aside>
   </main>
 </template>

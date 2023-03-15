@@ -2,13 +2,14 @@
   "root": true,
   "env": {
     "browser": false,
-    "node": true
+    "node": true,
+    "jest": true
   },
   "parserOptions": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   },
   "extends": [
-    "plugin:vue/essential",
+    "plugin:vue/recommended",
     "eslint:recommended"
   ],
   "rules": {

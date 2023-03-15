@@ -10,7 +10,7 @@ import OrderSummaryContainer from "@/containers/OrderSummaryContainer";
 import ShoppingCartContainer from "@/containers/ShoppingCartContainer";
 
 export default {
-  name: "Home",
+  name: "HomePage",
   components: { ShoppingCartContainer, OrderSummaryContainer }
 };
 </script>

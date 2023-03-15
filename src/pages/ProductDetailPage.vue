@@ -1,12 +1,12 @@
 <template>
-    <ProductDetailContainer />
+  <ProductDetailContainer />
 </template>
 
 <script>
 import ProductDetailContainer from "@/containers/ProductDetailContainer";
 
 export default {
-  name: "Home",
+  name: "ProductDetailPage",
   components: { ProductDetailContainer }
 };
 </script>

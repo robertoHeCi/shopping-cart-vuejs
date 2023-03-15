@@ -1,10 +1,16 @@
 <template>
   <div class="col-product">
     <figure class="product-image">
-      <img :src="productImage" :alt="productDescriptionAlt" @click="onProductDetailsClick" />
+      <img
+        :src="productImage"
+        :alt="productDescriptionAlt"
+        @click="onProductDetailsClick"
+      >
       <div class="product-description">
-        <h1>{{product.description}}</h1>
-        <p class="product-code">Product code {{product.code}}</p>
+        <h1>{{ product.description }}</h1>
+        <p class="product-code">
+          Product code {{ product.code }}
+        </p>
       </div>
     </figure>
   </div>

@@ -3,17 +3,17 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-// Example    
+// Example
 const routes = [
     {
         path: '/home',
         name: 'home',
-        component: () => lazyLoadComponent(import('@/pages/Home.vue')),
+        component: () => lazyLoadComponent(import('@/pages/HomePage.vue')),
     },
     {
         path: '/product/:id',
         name: 'product',
-        component: () => lazyLoadComponent(import('@/pages/ProductDetail.vue'))
+        component: () => lazyLoadComponent(import('@/pages/ProductDetailPage.vue'))
     },
     { path: '*', redirect: '/home' }
 

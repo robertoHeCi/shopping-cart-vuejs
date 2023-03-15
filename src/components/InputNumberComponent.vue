@@ -1,8 +1,23 @@
 <template>
   <div class="col-quantity">
-    <button class="count" @click="onCounterDecrements">-</button>
-    <input type="number" class="product-quantity" :value="value" disabled />
-    <button class="count" @click="onCounterIncrements">+</button>
+    <button
+      class="count"
+      @click="onCounterDecrements"
+    >
+      -
+    </button>
+    <input
+      type="number"
+      class="product-quantity"
+      :value="value"
+      disabled
+    >
+    <button
+      class="count"
+      @click="onCounterIncrements"
+    >
+      +
+    </button>
   </div>
 </template>
 <script>

@@ -2,7 +2,7 @@
 
 The application division 
 
-I follow a division that attempts to create an application that can be maintained and scaled. I have used the ports and adapters architecture, to divide the application responsabilities into layers:
+I've followed a folder structure that attempts to create a maintainable and scalable application. I have used the ports and adapters architecture, to divide the application responsabilities into layers:
 
 - **src/models**: 
   Classes that defines the structure of the diferents parts of the application( products, promotions, discounts and product position)

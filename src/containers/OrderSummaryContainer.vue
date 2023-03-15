@@ -1,24 +1,32 @@
 <template>
   <aside class="summary">
-    <h1 class="main">Order Summary</h1>
+    <h1 class="main">
+      Order Summary
+    </h1>
     <ul class="summary-items wrapper border">
       <li>
-        <span class="summary-items-number">{{productCounter}} Items</span>
+        <span class="summary-items-number">{{ productCounter }} Items</span>
         <span class="summary-items-price">
-          {{getFormattedDecimal(subTotal)}}
+          {{ getFormattedDecimal(subTotal) }}
         </span>
       </li>
     </ul>
     <div class="summary-discounts wrapper-half border">
       <h2>Discounts</h2>
       <ul>
-        <li v-for="(promotion,index) in promotions" :key="`prom_${index}`">
-          <span v-if="promotion.value > 0">{{promotion.description}}</span>
-          <span v-if="promotion.value > 0">-{{getFormattedDecimal(promotion.value)}}</span>
+        <li
+          v-for="(promotion,index) in promotions"
+          :key="`prom_${index}`"
+        >
+          <span v-if="promotion.value > 0">{{ promotion.description }}</span>
+          <span v-if="promotion.value > 0">-{{ getFormattedDecimal(promotion.value) }}</span>
         </li>
-        <li v-for="(discount,index) in discounts" :key="`disc${index}`">
-          <span v-if="discount.value > 0">{{discount.description}}</span>
-          <span v-if="discount.value > 0">-{{getFormattedDecimal(discount.value)}}</span>
+        <li
+          v-for="(discount,index) in discounts"
+          :key="`disc${index}`"
+        >
+          <span v-if="discount.value > 0">{{ discount.description }}</span>
+          <span v-if="discount.value > 0">-{{ getFormattedDecimal(discount.value) }}</span>
         </li>
       </ul>
     </div>
@@ -26,10 +34,12 @@
       <ul>
         <li>
           <span class="summary-total-cost">Total cost</span>
-          <span class="summary-total-price">{{getFormattedDecimal(total)}}</span>
+          <span class="summary-total-price">{{ getFormattedDecimal(total) }}</span>
         </li>
       </ul>
-      <button type="submit">Checkout</button>
+      <button type="submit">
+        Checkout
+      </button>
     </div>
   </aside>
 </template>

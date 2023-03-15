@@ -1,24 +1,44 @@
 <template>
   <section class="products">
-    <h1 class="main">Shopping cart</h1>
+    <h1 class="main">
+      Shopping cart
+    </h1>
     <ul class="products-list tableHead">
       <li class="products-list-title row">
-        <div class="col-product">Product details</div>
-        <div class="col-quantity">Quantity</div>
-        <div class="col-price">Price</div>
-        <div class="col-total">Total</div>
+        <div class="col-product">
+          Product details
+        </div>
+        <div class="col-quantity">
+          Quantity
+        </div>
+        <div class="col-price">
+          Price
+        </div>
+        <div class="col-total">
+          Total
+        </div>
       </li>
     </ul>
-    <ul class="products-list" v-if="products">
-      <li class="product row" v-for="(product,index) in products" :key="index">
-        <ProductComponent :product="product" @onProductDetailsClick="onProductDetailsClick" />
+    <ul
+      v-if="products"
+      class="products-list"
+    >
+      <li
+        v-for="(product,index) in products"
+        :key="index"
+        class="product row"
+      >
+        <ProductComponent
+          :product="product"
+          @onProductDetailsClick="onProductDetailsClick"
+        />
         <InputNumberComponent
           :value="getProductQuantity(product.code)"
           @onCounterIncrements="onCounterIncrements($event,product.code)"
           @onCounterDecrements="onCounterDecrements($event,product.code)"
         />
         <div class="col-price">
-          <span class="product-price">{{getFormattedDecimal(product.price)}}</span>
+          <span class="product-price">{{ getFormattedDecimal(product.price) }}</span>
         </div>
         <div class="col-total">
           <span class="product-price">{{ getFormattedDecimal(product.price * getProductQuantity(product.code)) }}</span>
